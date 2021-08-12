@@ -1,5 +1,8 @@
 # taipo
-A chord-based typing system that only needs 10 keys per hand (2 keys per finger) and optimized to reduce fiinger usage, distance travelled, and awkward patterns.  
+A chord-based typing system:
+- only needs 10 keys per hand (2 keys per finger)
+- optimized to reduce finger usage, travel distance, and awkward patterns
+- used billions of SLOC for training data
 
 | Chord						        | L0    | L1    | L2    | Chord                   | L0    | L1    | L2    |
 | :---         						| :---: | :---: | :---: | :---                    | :---: | :---: | :---: |
