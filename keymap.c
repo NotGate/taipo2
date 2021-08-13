@@ -1,4 +1,5 @@
-// qmk compile -kb planck/rev6 -km taipo
+// qmk new-keymap -kb gergoplex -km taipo
+// qmk compile -kb gboards/k/gergoplex -km taipo
 #include QMK_KEYBOARD_H
 
 #define XX KC_NO
@@ -20,11 +21,11 @@
 static uint16_t stateL, stateR;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-[0] = LAYOUT_planck_grid(
-     2,  4,  6,  8, XX, XX, XX, XX, 18, 16, 14, 12,
-     1,  3,  5,  7, XX, XX, XX, XX, 17, 15, 13, 11,
-    XX, XX, XX, XX, XX, XX, XX, XX, XX, XX, XX, XX,
-    XX, XX,  9, 10, XX, XX, XX, XX, 20, 19, XX, XX)
+[0] = LAYOUT_gergoplex(
+     2,  4,  6,  8, XX, XX, 18, 16, 14, 12,
+     1,  3,  5,  7, XX, XX, 17, 15, 13, 11,
+    XX, XX, XX, XX, XX, XX, XX, XX, XX, XX,
+        XX,  9, 10,         20, 19, XX)
 };
 
 static void send(uint16_t val) {
@@ -65,9 +66,10 @@ static void send(uint16_t val) {
         case ib|mb|rb: TAP(KC_V)
         case it|mt|rt: TAP(KC_EXLM)
         case ib|mt|rt: TAP(KC_J)
-        case it|mt|rb: TAP(KC_RCBR)
+        case it|mt|rb: TAP(KC_LCBR)
 
         // Layer 1
+        case tb: TAP(KC_SPC)
         case tb|ib: TAP(S(KC_T))
         case tb|it: TAP(S(KC_E))
         case tb|mb: TAP(S(KC_I))
@@ -103,9 +105,10 @@ static void send(uint16_t val) {
         case tb|ib|mb|rb: TAP(S(KC_V))
         case tb|it|mt|rt: TAP(KC_QUES)
         case tb|ib|mt|rt: TAP(S(KC_J))
-        case tb|it|mt|rb: TAP(KC_LCBR)
+        case tb|it|mt|rb: TAP(KC_RCBR)
 
         // Layer 2
+        case tt: TAP(KC_BSPC)
         case tt|ib: TAP(KC_GRV)
         case tt|it: TAP(KC_CIRC)
         case tt|mb: TAP(KC_PLUS)
@@ -146,14 +149,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return false;
 }
-
-/*
-void matrix_scan_user() {
-    if(side!=NONE && timer_elapsed(start)>10){
-        send(stateL);
-        send(stateR);
-        stateL = 0;
-        stateR = 0;
-    }
-}
-*/
