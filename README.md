@@ -28,9 +28,9 @@ Taipo is symmetric, so the left hand would mirror the right hand.
 | ⚫⚫⚫⚫<br>⚪⚪⚪⚫| v       | V       | KC_MUTE | ⚪⚪⚪⚫<br>⚫⚫⚫⚫| !       | ?         | KC_MPLY |
 | ⚫⚪⚪⚫<br>⚪⚫⚫⚫| j       | J       |         | ⚪⚫⚫⚫<br>⚫⚪⚪⚫| KC_LEFT |           |         |
 | ⚪⚪⚫⚫<br>⚫⚫⚪⚫| {       | }       |         | ⚫⚫⚪⚫<br>⚪⚪⚫⚫| KC_RGHT |           |         |
-| ⚫⚫⚪⚪<br>⚫⚪⚫⚫| KC_LCTL | KC_LALT | KC_LGUI | ⚫⚪⚫⚫<br>⚫⚫⚪⚪| KC_LSFT | KC_ALGR   | KC_LEAD |
 | ⚫⚪⚫⚫<br>⚪⚫⚪⚫| KC_UP   | KC_PGUP | KC_HOME | ⚪⚫⚪⚫<br>⚫⚪⚫⚫| KC_DOWN | KC_PGDOWN | KC_END  |
-| ⚫⚫⚫⚫<br>⚫⚪⚪⚪| KC_ENT  | KC_TAB  | KC_ESC  | ⚫⚪⚪⚪<br>⚫⚫⚫⚫| KC_DEL  | KC_INS    | KC_PSCR 
+| ⚫⚫⚫⚫<br>⚫⚪⚪⚪| KC_ENT  | KC_TAB  | KC_ESC  | ⚫⚪⚪⚪<br>⚫⚫⚫⚫| KC_DEL  | KC_INS    | KC_PSCR |
+| ⚫⚫⚪⚪<br>⚫⚪⚫⚫| KC_LCTL | KC_LALT | KC_LGUI | ⚫⚪⚫⚫<br>⚫⚫⚪⚪| KC_LSFT | KC_ALGR   | KC_LEAD |
 
 ## Notes
 - Taipo was only optimized for typing visible characters (the main ascii 97), so feel free to move/add/subtract modifiers, nav keys, etc.  
