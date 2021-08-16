@@ -74,8 +74,8 @@ static void send(uint16_t val) {
         case it|mb|rt: TAP(KC_DOWN)
         case mb|rb|pb: TAP(KC_ENT)
         case mt|rt|pt: TAP(KC_DEL)
-        // case mb|rt|pt: OS(KC_LCTL)
-        // case mt|rb|pb: OS(KC_LSFT)
+        case mb|rt|pt: OS(MOD_LCTL)
+        case mt|rb|pb: OS(MOD_LSFT)
 
         // Layer 1
         case tb: TAP(KC_SPC)
@@ -119,8 +119,8 @@ static void send(uint16_t val) {
         case tb|it|mb|rt: TAP(KC_PGDOWN)
         case tb|mb|rb|pb: TAP(KC_TAB)
         case tb|mt|rt|pt: TAP(KC_INS)
-        // case mb|rt|pt: OS(KC_LALT)
-        // case mt|rb|pb: OS(KC_ALGR)
+        case tb|mb|rt|pt: OS(MOD_LALT)
+        case tb|mt|rb|pb: OS(MOD_RALT)
 
         // Layer 2
         case tt: TAP(KC_BSPC)
@@ -158,8 +158,8 @@ static void send(uint16_t val) {
         case tt|it|mb|rt: TAP(KC_END)
         case tt|mb|rb|pb: TAP(KC_ESC)
         case tt|mt|rt|pt: TAP(KC_PSCR)
-        // case mb|rt|pt: OS(KC_LGUI)
-        // case mt|rb|pb: OS(KC_LEAD)
+        case tt|mb|rt|pt: OS(MOD_LGUI)
+        // case tt|mt|rb|pb: TAP(MOD_LEAD)
     }
 }
 
