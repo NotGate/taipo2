@@ -159,7 +159,7 @@ static void send(uint16_t val) {
         case tt|mb|rb|pb: TAP(KC_ESC)
         case tt|mt|rt|pt: TAP(KC_PSCR)
         case tt|mb|rt|pt: OS(MOD_LGUI)
-        // case tt|mt|rb|pb: TAP(MOD_LEAD)
+        case tt|mt|rb|pb: TAP(KC_LEAD)
     }
 }
 
