@@ -4,9 +4,10 @@ A chord-based typing system:
 - optimized to reduce finger usage, travel distance, and awkward patterns
 - used billions of SLOC for training data
 
-
-This table shows what the index, middle, ring, and pinky need to do on the right hand for a chord. L1 and L2 mean a thumb button is needed.   
+This table shows what the index, middle, ring, and pinky need to do on the right hand for a chord.  
+L1 and L2 mean a thumb button is needed.  
 Taipo is symmetric, so the left hand would mirror the right hand.  
+By default, the left and right hand chord at the same time, sending two characters at a time.  
 | Chord						        | L0      | L1      | L2      | Chord                   | L0      | L1        | L2      |
 | :---         						| :---:   | :---:   | :---:   | :---:                   | :---:   | :---:     | :---:   |
 | ⚫⚫⚫⚫<br>⚪⚫⚫⚫| t       | T       | `       | ⚪⚫⚫⚫<br>⚫⚫⚫⚫| e       | E         | ^       |
