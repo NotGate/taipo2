@@ -177,3 +177,33 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return false;
 }
+
+
+LEADER_EXTERNS();
+void matrix_scan_user(void) {
+  LEADER_DICTIONARY() {
+    leading = false;
+    leader_end();
+
+    SEQ_ONE_KEY(KC_1) { tap_code16(KC_F1); }
+    SEQ_ONE_KEY(KC_2) { tap_code16(KC_F2); }
+    SEQ_ONE_KEY(KC_3) { tap_code16(KC_F3); }
+    SEQ_ONE_KEY(KC_4) { tap_code16(KC_F4); }
+    SEQ_ONE_KEY(KC_5) { tap_code16(KC_F5); }
+    SEQ_ONE_KEY(KC_6) { tap_code16(KC_F6); }
+    SEQ_ONE_KEY(KC_7) { tap_code16(KC_F7); }
+    SEQ_ONE_KEY(KC_8) { tap_code16(KC_F8); }
+    SEQ_ONE_KEY(KC_9) { tap_code16(KC_F9); }
+
+    SEQ_TWO_KEYS(KC_0, KC_0) { tap_code16(KC_F10); }
+    SEQ_TWO_KEYS(KC_0, KC_1) { tap_code16(KC_F11); }
+    SEQ_TWO_KEYS(KC_0, KC_2) { tap_code16(KC_F12); }
+    SEQ_TWO_KEYS(KC_0, KC_3) { tap_code16(KC_F13); }
+    SEQ_TWO_KEYS(KC_0, KC_4) { tap_code16(KC_F14); }
+    SEQ_TWO_KEYS(KC_0, KC_5) { tap_code16(KC_F15); }
+    SEQ_TWO_KEYS(KC_0, KC_6) { tap_code16(KC_F16); }
+    SEQ_TWO_KEYS(KC_0, KC_7) { tap_code16(KC_F17); }
+    SEQ_TWO_KEYS(KC_0, KC_8) { tap_code16(KC_F18); }
+    SEQ_TWO_KEYS(KC_0, KC_9) { tap_code16(KC_F19); }
+  }
+}
