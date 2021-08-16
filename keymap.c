@@ -1,5 +1,6 @@
 // qmk new-keymap -kb gergoplex -km taipo
 // qmk compile -kb gboards/k/gergoplex -km taipo
+// make gboards/k/gergoplex:default:flash
 #include QMK_KEYBOARD_H
 
 #define XX KC_NO
@@ -67,6 +68,14 @@ static void send(uint16_t val) {
         case it|mt|rt: TAP(KC_EXLM)
         case ib|mt|rt: TAP(KC_J)
         case it|mt|rb: TAP(KC_LCBR)
+        case it|mb|rb: TAP(KC_LEFT)
+        case ib|mb|rt: TAP(KC_RGHT)
+        case ib|mt|rb: TAP(KC_UP)
+        case it|mb|rt: TAP(KC_DOWN)
+        case mb|rb|pb: TAP(KC_ENT)
+        case mt|rt|pt: TAP(KC_DEL)
+        // case mb|rt|pt: OS(KC_LCTL)
+        // case mt|rb|pb: OS(KC_LSFT)
 
         // Layer 1
         case tb: TAP(KC_SPC)
@@ -106,6 +115,12 @@ static void send(uint16_t val) {
         case tb|it|mt|rt: TAP(KC_QUES)
         case tb|ib|mt|rt: TAP(S(KC_J))
         case tb|it|mt|rb: TAP(KC_RCBR)
+        case tb|ib|mt|rb: TAP(KC_PGUP)
+        case tb|it|mb|rt: TAP(KC_PGDOWN)
+        case tb|mb|rb|pb: TAP(KC_TAB)
+        case tb|mt|rt|pt: TAP(KC_INS)
+        // case mb|rt|pt: OS(KC_LALT)
+        // case mt|rb|pb: OS(KC_ALGR)
 
         // Layer 2
         case tt: TAP(KC_BSPC)
@@ -130,9 +145,22 @@ static void send(uint16_t val) {
         case tt|ib|pb: TAP(KC_PIPE)
         case tt|it|pt: TAP(KC_AMPR)
         case tt|ib|mt: TAP(KC_PERC)
+        case tt|mb|rt: TAP(KC_VOLD)
         case tt|it|mb: TAP(KC_AT)
+        case tt|mt|rb: TAP(KC_VOLU)
+        case tt|ib|rt: TAP(KC_MPRV)
+        case tt|it|rb: TAP(KC_MNXT)
+        case tt|ib|pt: TAP(KC_BRID)
+        case tt|it|pb: TAP(KC_BRIU)
+        case tt|ib|mb|rb: TAP(KC_MUTE)
+        case tt|it|mt|rt: TAP(KC_MPLY)
+        case tt|ib|mt|rb: TAP(KC_HOME)
+        case tt|it|mb|rt: TAP(KC_END)
+        case tt|mb|rb|pb: TAP(KC_ESC)
+        case tt|mt|rt|pt: TAP(KC_PSCR)
+        // case mb|rt|pt: OS(KC_LGUI)
+        // case mt|rb|pb: OS(KC_LEAD)
     }
-    // TODO: mods, audio, brightness, media, arrows, home, end, pgup, pgdown
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
