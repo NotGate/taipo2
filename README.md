@@ -33,5 +33,5 @@ Taipo is symmetric, so the left hand would mirror the right hand.
 | ⚫⚫⚪⚪<br>⚫⚪⚫⚫| KC_LCTL | KC_LALT | KC_LGUI | ⚫⚪⚫⚫<br>⚫⚫⚪⚪| KC_LSFT | KC_ALGR   | KC_LEAD |
 
 ## Notes
-- Taipo was only optimized for typing visible characters (the main ascii 97), so feel free to move/add/subtract modifiers, nav keys, etc.  
+- Taipo was only optimized for typing visible characters (the main ascii 94), so feel free to move/add/subtract modifiers, nav keys, etc.  
 - You can enter F1-F19 using the KC_LEAD chord. KC_LEAD+[1-9]=F1-F9, KC_LEAD+0+[0-9]=F10-F19
